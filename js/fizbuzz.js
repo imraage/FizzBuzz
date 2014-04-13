@@ -1,5 +1,8 @@
-$(document).ready(function() {
-	for (var i = 1; i < 101; i++) {
+$(document).ready(function() {	
+
+var num = prompt("Enter a number here please");
+
+	for (var i = 1; i <=num; i++) {
 
 		if (i % 3 == 0) {
 			$('body').append('Fizz');
@@ -17,6 +20,6 @@ $(document).ready(function() {
 			$('body').append(i);
 		}
 		
-		$('body').append("<br>");
+		$('body').append("<br />");
 	}
 });
