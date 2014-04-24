@@ -1,25 +1,36 @@
-$(document).ready(function() {	
+$(document).ready(function() {
+	fizBuzz();
+})
 
-var num = prompt("Enter a number here please");
+var fizBuzz = function (num) {
+	var num;
+	num = parseInt(prompt("Please enter a number")); 
+	while(isNaN(num)) {
+		alert("Please enter a number");
+		num = parseInt(prompt("Please enter a number"));
+	}
 
-	for (var i = 1; i <=num; i++) {
+		for (var i = 1; i <=num; i++) {
 
 		if (i % 3 == 0) {
-			$('body').append('Fizz');
+			$('ul').append('<li>Fizz</li>');
 		} 
 
 		else if (i % 5 == 0) {
-			$('body').append('Buzz');
+			$('ul').append('<li>Buzz</li>');
 		} 
 
 		else if (i % 15 == 0) {
-			$('body').append('FizzBuzz');
+			$('ul').append('<li>FizzBuzz</li>');
 		} 
 
 		else {
-			$('body').append(i);
+			$('ul').append(i);
 		}
 		
-		$('body').append("<br />");
+		$('ul').append("<br/>");
 	}
-});
+
+	} 
+
+
